@@ -1,0 +1,51 @@
+Nome da academia: Academia Força Bruta
+
+Entidade: Diretor
+Relacionamento: "Resolver" 1:1 com o "Gerente" e "Fiscalizar 1:N com RH e Financeiro.
+Função: Um diretor é o principal cargo da empresa e suas responsabilidades incluem resolver problemas, fiscalizar os recursos e operações gerais, fiscalizar entradas e saídas de orçamento financeiro.
+Atributos: Nome, Data-Ínicio, CPF (AI), Sexo  
+
+Entidade: Gerente
+Relacionamento: "Gerenciar" 1:4 com Professor, Nutricionista, Serviços Gerais e Estagiário. "Receber" 1:1 com o Financeiro.
+Função: Gerenciar com tarefas designadas à favor da Academia e receber salário do Financeiro.
+Atributos: Nome, Data-Ínicio, CPF (AI), Salário, Sexo
+
+Entidade: Recursos Humanos
+Relacionamento: "Controlar" 1:N, "Receber" 1:1 com o Financeiro
+Função: Controlar escalas de serviços dos colaboradores da Academia e receber salário do Financeiro.
+Atributos: Nome, Data-Ínicio, CPF (AI), Salário, Sexo
+
+Entidade: Financeiro
+Relacionamento: "Administrar" 1:1 com a Recepção. "Pagar" 1:N.
+Função: É o setor responsável pela administração das mensalidades da Academia e Pagamentos da folha salarial.
+Atributos: Nome, Data-Ínicio, CPF (AI), Salário, Sexo
+
+Entidade: Professor
+Relacionamento: "Avaliar" 1:1 com o Aluno, "Treinar" 1:1 com o Aluno, "Receber" 1:1 com o Financeiro
+Função: Fazer avaliação fisica e promover treinos para o aluno e receber salário do Financeiro.
+Atributos: Nome, Data-Ínicio, CPF (AI), Salário, Sexo
+
+Entidade: Nutricionista OK
+Relacionamento: "Conselhar" 1:1 o Aluno, "Receber" 1:1 com o Financeiro
+Função: Conselhar um plano alimentar para o aluno e receber salário do Financeiro.
+Atributos: Nome, Data-Ínicio, CPF (AI), Salário, Sexo
+
+Entidade: Serviços Gerais
+Relacionamento: "Zelar", "Receber" 1:1 com o Financeiro
+Função: Zelar pela limpeza e equipamentos da academia e receber salário do Financeiro.
+Atributos: Nome, Data-Ínicio, CPF (AI), Salário, Sexo
+
+Entidade: Estagiário
+Relacionamento: Aprender 1:1 com o Professor, "Receber" 1:1 com o Financeiro 
+Função: Aprender com o Professor os treinamentos e receber salário do Financeiro.
+Atributos: Nome, Data-Ínicio, CPF (AI), Salário, Sexo
+
+Entidade: Recepção
+Relacionamento: "Recolher" 1:N com o Aluno.
+Função: Recolher mensalidades de alunos e receber salário do Financeiro.
+Atributos:Nome, Data-Ínicio, CPF (AI), Salário, Sexo
+
+Entidade: Aluno
+Relacionamento: "Treinar" 1:1 com o Professor
+Função: Treinar exercícios ensinados.
+Atributos: Matrícula (AI), Nome, Peso, Altura.
